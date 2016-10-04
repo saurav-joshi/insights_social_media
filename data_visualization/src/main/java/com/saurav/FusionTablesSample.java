@@ -87,7 +87,7 @@ public class FusionTablesSample {
             fusiontables = new Fusiontables.Builder(
                     httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
 
-            CSVReader reader = new CSVReader(new FileReader("/Users/srinath_achanta/Downloads/music.csv"));
+            CSVReader reader = new CSVReader(new FileReader("/src/main/resources/corelation.csv"));
             // run commands
             listTables();
             String tableId = createTable(reader);
@@ -149,24 +149,25 @@ public class FusionTablesSample {
         // Create a new table
         Table table = new Table();
         //table.setName(UUID.randomUUID().toString());
-        table.setName("music");
+        table.setName("twitter_insights");
         table.setIsExportable(true);
-        table.setDescription("Indonesia - Music tastes");
+        table.setDescription("corelation between IAB categories");
 
         String[] line;
         while((line = reader.readNext()) != null) {
 
             // Set columns for new table
             table.setColumns(Arrays.asList(new Column().setName(line[0].toString().toLowerCase()).setType("STRING"),
-                    new Column().setName(line[1].toString().toLowerCase()).setType("STRING"),
+                    new Column().setName(line[1].toString().toLowerCase()).setType("NUMBER"),
                     new Column().setName(line[2].toString().toLowerCase()).setType("STRING"),
-                    new Column().setName(line[3].toString().toLowerCase()).setType("STRING"),
+                    new Column().setName(line[3].toString().toLowerCase()).setType("NUMBER")));
+            /*,
                     new Column().setName(line[4].toString().toLowerCase()).setType("STRING"),
                     new Column().setName(line[5].toString().toLowerCase()).setType("STRING"),
                     new Column().setName(line[6].toString().toLowerCase()).setType("STRING"),
                     new Column().setName(line[7].toString().toLowerCase()).setType("STRING"),
                     new Column().setName(line[8].toString().toLowerCase()).setType("NUMBER"),
-                    new Column().setName(line[9].toString().toLowerCase()).setType("STRING")));
+                    new Column().setName(line[9].toString().toLowerCase()).setType("STRING"))*/
             break;
         }
         // Adds a new column to the table.
@@ -186,8 +187,8 @@ public class FusionTablesSample {
             try {
             if (!header) {
                 //System.out.println("VALUES (\'" + line[0]+"\', \'" + line[1]+"\', \'" + line[2]+"\', \'"+ line[3]+"\', \'"+ line[4]+"\', \'"+ line[5]+"\', \'"+ line[6]+"\', \""+ line[7]+"\", "+ line[8]+", \'"+ line[9]+ "\')");
-                Sql sql = fusiontables.query().sql("INSERT INTO " + tableId + " (city,gender,age,income,marital_status,job,education,preference,id_count,music_genre) "
-                        + "VALUES (\'" + line[0]+"\', \'" + line[1]+"\', \'" + line[2]+"\', \'"+ line[3]+"\', \'"+ line[4]+"\', \'"+ line[5]+"\', \'"+ line[6]+"\', \'"+ line[7].toString().replaceAll("\'","")+"\', "+ line[8]+", \'"+ line[9]+ "\')");
+                Sql sql = fusiontables.query().sql("INSERT INTO " + tableId + " (primary_category,primary_cat_rank,second_category,affinity_score\n) "
+                        + "VALUES (\'" + line[0]+"\', \'" + line[1]+"\', \'" + line[2]+"\', \'"+ line[3]+"\')");
                 sql.execute();
             }
             header = false;

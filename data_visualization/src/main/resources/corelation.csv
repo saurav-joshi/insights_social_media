@@ -1,0 +1,56 @@
+primary_category,primary_cat_rank,second_category,affinity_score
+Arts & Entertainment,1,Family & Parenting,1.3572708568394505
+Arts & Entertainment,1,Fashion,7.957788544501228
+Arts & Entertainment,1,Food & Drink,1.8650029866595874
+Arts & Entertainment,1,Hobbies & Interests,0.4081768102475609
+Arts & Entertainment,1,Religion & Sprituality,0.47786553394836395
+Sports,2,Arts & Entertainment,12.3556271823798
+Sports,2,Family & Parenting,3.9126152744202702
+Sports,2,Fashion,12.601844390724326
+Sports,2,Food & Drink,9.333870534515176
+Sports,2,Hobbies & Interests,0.57301459396544
+Fashion,3,Arts & Entertainment,9.536645781728108
+Fashion,3,Family & Parenting,3.154597114964301
+Fashion,3,Food & Drink,4.225557336441789
+Fashion,3,Hobbies & Interests,0.05828354946816262
+Fashion,3,Religion & Sprituality,0.6629753752003498
+Technology & Computing,4,Arts & Entertainment,18.1723779854621
+Technology & Computing,4,Family & Parenting,2.1806853582554515
+Technology & Computing,4,Fashion,8.826583592938734
+Technology & Computing,4,Food & Drink,3.2883350640359987
+Technology & Computing,4,Hobbies & Interests,0.13845621322256838
+Society,5,Arts & Entertainment,18.184475953807922
+Society,5,Family & Parenting,7.425814939336354
+Society,5,Fashion,17.745943575500657
+Society,5,Food & Drink,17.760561321444232
+Society,5,Hobbies & Interests,0.1900306972664815
+Food & Drink,6,Arts & Entertainment,5.4556354916067145
+Food & Drink,6,Family & Parenting,1.1590727418065547
+Food & Drink,6,Fashion,4.496402877697841
+Food & Drink,6,Hobbies & Interests,0.03996802557953637
+Food & Drink,6,Religion & Sprituality,1.8185451638689047
+Travel,7,Arts & Entertainment,7.339857651245552
+Travel,7,Family & Parenting,6.450177935943061
+Travel,7,Fashion,4.270462633451958
+Travel,7,Food & Drink,6.628113879003558
+Travel,7,Hobbies & Interests,0.04448398576512455
+Family & Parenting,8,Arts & Entertainment,8.150984682713348
+Family & Parenting,8,Fashion,15.75492341356674
+Family & Parenting,8,Food & Drink,2.735229759299781
+Family & Parenting,8,Hobbies & Interests,0.05470459518599562
+Family & Parenting,8,Religion & Sprituality,2.8446389496717726
+Science,9,Arts & Entertainment,15.060804490177738
+Science,9,Family & Parenting,2.432179607109448
+Science,9,Fashion,4.583723105706268
+Science,9,Food & Drink,7.951356407857811
+Science,9,Hobbies & Interests,0.18709073900841908
+Religion & Sprituality,10,Arts & Entertainment,7.038123167155426
+Religion & Sprituality,10,Family & Parenting,1.906158357771261
+Religion & Sprituality,10,Fashion,2.785923753665689
+Religion & Sprituality,10,Food & Drink,1.1730205278592376
+Religion & Sprituality,10,Hobbies & Interests,0.43988269794721413
+Hobbies & Interests,11,Arts & Entertainment,15.217391304347828
+Hobbies & Interests,11,Family & Parenting,2.1739130434782608
+Hobbies & Interests,11,Fashion,4.3478260869565215
+Hobbies & Interests,11,Religion & Sprituality,6.521739130434782
+Hobbies & Interests,11,Science,2.1739130434782608
